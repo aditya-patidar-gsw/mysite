@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatiman Steel Work</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #010101;
+            color: rgb(190, 162, 37);
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 100px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            background-color: #010101;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        #home {
+            width: 100%;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to right, red, #cc0085);
+            color: white;
+        }
+
+        #home .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #home .button:hover {
+            background-color: #0066cc;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .portfolio-item {
+            width: calc(33.333% - 20px); /* 3 items per row */
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .portfolio-item .portfolio-border {
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .portfolio-item:hover .portfolio-border {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .portfolio-thumb {
+            width: 100%;
+            height: 200px; /* Fixed height for images */
+            overflow: hidden;
+        }
+
+        .portfolio-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            border-radius: 5px;
+        }
+
+        .portfolio-details h4 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .portfolio-details a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .portfolio-details a:hover {
+            color: #cc0085;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .portfolio-item {
+                width: calc(50% - 20px); /* 2 items per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-item {
+                width: 100%; /* 1 item per row */
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .footer-logo img {
+            width: 150px;
+        }
+
+        .footer-section {
+            flex: 1 1 14%; /* Adjusted for 6 columns */
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .footer-section h3 {
+            margin-top: 0;
+            color: #f1f1f1;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 8px 0;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-section {
+                flex: 1 1 30%; /* Adjusted for medium-sized screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-section {
+                flex: 1 1 100%; /* Stacks in 1 column for small screens */
+                text-align: center;
+            }
+
+            .social-icons a {
+                width: 50px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <img src="Picsart_25-01-18_22-23-59-198.jpg" alt="Company Logo">
+            <h1>Gatiman Steel Works</h1>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a class="about" href="about.html">About Us</a>
+        </nav>
+    </header>
+
+    <div class="recent-project">
+        <span><h2 class="classic-titile">Widest Range of Fasteners</h2></span>
+    </div>
+
+    <div class="project">
+        <div class="container">
+            
+            <div class="portfolio-item item item col-md-3 col-sm-6">
+                <div class="portfolio-border">
+                    <div class="portfolio-thumb">
+                        <a href="screws.html">
+                            <img src="stainless-steel-screws-4607197_640.jpg" alt="Screws">
+                        </a>
+                    </div>
+                    <div class="portfolio-details">
+                        <a href="screws.html">
+                            <h4>SCREWS</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item item item col-md-3 col-sm-6">
+                <div class="portfolio-border">
+                    <div class="portfolio-thumb">
+                        <a href="bolts.html">
+                            <img src="boltss.jpg" alt="Bolts">
+                        </a>
+                    </div>
+                    <div class="portfolio-details">
+                        <a href="bolts.html">
+                            <h4>BOLTS</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item item item col-md-3 col-sm-6">
+                <div class="portfolio-border">
+                    <div class="portfolio-thumb">
+                        <a href="nuts.html">
+                            <img src="nutss.jpg" alt="Nuts">
+                        </a>
+                    </div>
+                    <div class="portfolio-details">
+                        <a href="nuts.html">
+                            <h4>NUTS</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item item item col-md-3 col-sm-6">
+                <div class="portfolio-border">
+                    <div class="portfolio-thumb">
+                        <a href="washers.html">
+                            <img src="washerss.jpg" alt="Washers">
+                        </a>
+                    </div>
+                    <div class="portfolio-details">
+                        <a href="washers.html">
+                            <h4>WASHERS</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item item item col-md-3 col-sm-6">
+                <div class="portfolio-border">
+                    <div class="portfolio-thumb">
+                        <a href="studs.html">
+                            <img src="studss.jpg" alt="Studs">
+                        </a>
+                    </div>
+                    <div class="portfolio-details">
+                        <a href="studs.html">
+                            <h4>STUDS</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- First column: Logo and Company Description -->
+        <div class="footer-section footer-logo">
+            <img src="Picsart_25-01-18_22-23-59-198-removebg-preview.png" alt="Gatiman Steel Works Logo">
+            <p><h5>**QUALITY YOU CAN TRUST**</h5><br>We provide high-quality, precision-engineered fasteners to a wide range of industries, including automotive, construction, and industrial sectors.</p>
+        </div>
+        
+        <!-- Second column: Contact Info -->
+        <div class="footer-section contact-info">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><strong>Phone:</strong> +91 8319402756</li>
+                <li><strong>Email:</strong> <a href="mailto:support@gatimansteelworks.com">support@gatimansteelworks.com</a></li>
+            </ul>
+        </div>
+
+        <!-- Third column: Products -->
+        <div class="footer-section">
+            <h3>Products</h3>
+            <ul>   
+                <li><a href="home.html">Home Page</a></li> 
+                <li><a href="screws.html">Screws</a></li>
+                <li><a href="bolts.html">Bolts</a></li>
+                <li><a href="nuts.html">Nuts</a></li>
+                <li><a href="studs.html">Studs</a></li>
+                <li><a href="washers.html">Washer</a></li>
+            </ul>
+        </div>
+
+        <!-- Fourth column: About Us -->
+        <div class="footer-section about-us">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="about.html">gatiman steel works</a></li>
+                <li><a href="quality.html">Quality</a></li>
+                <li><a href="specialized.html">Specialized Coatings</a></li>
+            </ul>
+        </div>
+
+        <!-- Fifth column: Follow Us (Social Media Links) -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://wa.me/+918319402756">WhatsApp</a></li>
+                <li><a href="https://www.linkedin.com/in/adityapatidar51@gmail.com">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/in/gatimansteelworks">Instagram</a></li>
+            </ul>
+        </div>
+
+        <!-- Sixth column: Location -->
+        <div class="footer-section">
+            <h3>Location</h3>
+            <ul>
+                <li><a href="https://www.google.com/maps?q=22.5667041,75.8200224" target="_blank">Google Maps</a></li>
+                <li><a href="https://maps.apple.com/?q=22.5667041,75.8200224" target="_blank">Apple Maps</a></li>
+                <li><a href="https://www.bing.com/maps?q=22.5667041,75.8200224" target="_blank">Bing Maps</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- WhatsApp and LinkedIn Icons (Social Icons) -->
+    <div class="social-icons">
+        <a href="https://wa.me/+918319402756" target="_blank">
+            <img src="wpp.jpg" alt="Chat with us on WhatsApp" width="50">
+        </a>
+        <a href="https://www.linkedin.com/in/adityapatidar51@gmail.com" target="_blank">
+            <img src="ln.jpg" alt="Chat with us on LinkedIn" width="38">
+        </a>
+    </div>
+
+    <!-- Footer Copyright -->
+    <div style="text-align: center; margin-top: 20px;">
+        <p>&copy; 2025 Gatiman Steel Works. All rights reserved.</p>
+    </div>
+</body>
+</html>
